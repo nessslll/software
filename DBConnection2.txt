@@ -1,0 +1,10 @@
+ catch (Exception)
+            {
+
+                MessageBox.Show("Hata Oldu.");
+            }
+            finally 
+	    {
+                baglanti.Close();
+                Form1_Load(sender, e);
+            }
