@@ -17,6 +17,12 @@
 <![endif]-->
     <!-- Slider -->
     <link href="scripts/responsiveslides.js-v1.53/responsiveslides.css" rel="stylesheet" type="text/css" media="all">
+    <style type="text/css">
+        .auto-style1 {
+            width: 100px;
+            height: 100px;
+        }
+    </style>
 </head>
 <body>
     <form id="form1" runat="server">
@@ -35,6 +41,11 @@
                     </div>
                 </header>
             </div>
+
+
+
+          
+
             <!-- ################################################################################################ -->
             <div class="wrapper row2">
                 <nav id="topnav">
@@ -63,12 +74,42 @@
                 </nav>
             </div>
            
+            <div>
+                <asp:Table ID="Table1" runat="server"></asp:Table>
 
+            </div>
+                
 
+            <div style="width:800px"  align="center">
+              <table border="1" style="height: 414px; width: 1200px">
+               <tr>
+                   <td class="auto-style1"> 
+            <h3> Bahar Şenliği:</h3>
+         Eskişehir Osmangazi Üniversitesi Rektörlüğü tarafından düzenlenen ve 13-15 Mayıs 2013 tarihlerinde gerçekleşecek olan Bahar Şenliği 2013 başladı. Şenlik; Atatürk ve Gençlik Anıtı önünde saygı duruşunda bulunulması ve İstiklal Marşı okunmasını takiben şenlik yürüyüşü ile başlarken, Atatürk ve Gençlik Anıtı ile Spor Salonu önündeki şenlik alanı arasında yapılan yürüyüşe; Üniversite Yönetimi, akademik ve idari personel ile öğrenciler katıldı.
 
+Şenlik alanında yapılan açılış töreninde konuşan ESOGÜ Rektör Yardımcısı Prof. Dr. İlhami Ünlüoğlu, konuşmasına Hatay Reyhanlı’da meydana gelen bombalı saldırıda hayatını kaybedenler ve yakınları için üzüntülerini ve başsağlığı dileklerini sunarak başlarken, saldırıyı kınadığını ve lanetlediğini söyledi. Bahar Şenliği 2013’ü Rektörlük olarak öğrencilerin sınavlarının en az etkileneceği zamana denk getirmeye çalıştıklarını belirten Prof. Dr. İlhami Ünlüoğlu; Bahar Şenliği’nin öğrencilerin stres atmasını, dinlenmesini ve motivasyonlarının yükselmesini sağlamayı amaçladığını ifade etti. Bahar Şenliği 2013 kapsamında çok sayıda konser, gösteri ve diğer etkinlikler bulunduğunu hatırlatan Prof. Dr. İlhami Ünlüoğlu, şenliklerin neşeli geçmesini diledi.
 
+Şenlik açılış programı ESOGÜ Halkbilim Araştırma ve Uygulama Merkezi Ritim Grubu tarafından sunulan gösteri ve sonrasında 2013 Bahar Şenliği Fakülteler Arası Spor Müsabakaları kupa töreni ile devam etti. Açılış programı, şenlik pilavı ikramı ile sona erdi.<br />
+&nbsp;<h3>Galeri:</h3>
 
+                       <asp:Image ID="Image1" runat="server" ImageUrl="~/images/bahar senligi/senlik1-300x336.jpg" Height="300px" Width="336px" />
+                       <asp:Image ID="Image3" runat="server"  ImageUrl="~/images/bahar senligi/senlik4-300x195.jpg" Height="300px" Width="336px" />
+                       <asp:Image ID="Image2" runat="server"  ImageUrl="~/images/bahar senligi/senlik3-300x199.jpg" Height="300px" Width="336px" />
 
+                       <br />
+                       <br />
+                       <h3>Etkinlik Programı:</h3>
+                       <p>13 Mayıs- Gripin Konseri     Saat 20.30</p>
+                       <p>14 Mayıs- Göksel Konseri     Saat 20.30</p>
+                       <p>15 Mayıs- Gökhan Türkmen Konseri     Saat 20.30</p>
+                       <h3>Tanıtım Videosu:</h3>
+
+                       <iframe width="560" height="315" src="//www.youtube.com/embed/oazJ2TexUKw" frameborder="0" allowfullscreen></iframe>
+
+                       
+                       </table>
+
+          </div>
                     
         <!-- Footer -->
         <div class="wrapper row2">
