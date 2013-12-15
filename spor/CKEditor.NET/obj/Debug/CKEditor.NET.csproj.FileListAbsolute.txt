@@ -1,0 +1,5 @@
+C:\Users\Ferhat-HGG\Documents\Visual Studio 2012\Projects\spor\CKEditor.NET\bin\Debug\CKEditor.NET.dll
+C:\Users\Ferhat-HGG\Documents\Visual Studio 2012\Projects\spor\CKEditor.NET\bin\Debug\CKEditor.NET.pdb
+C:\Users\Ferhat-HGG\Documents\Visual Studio 2012\Projects\spor\CKEditor.NET\obj\Debug\CKEditor.NET.csprojResolveAssemblyReference.cache
+C:\Users\Ferhat-HGG\Documents\Visual Studio 2012\Projects\spor\CKEditor.NET\obj\Debug\CKEditor.NET.dll
+C:\Users\Ferhat-HGG\Documents\Visual Studio 2012\Projects\spor\CKEditor.NET\obj\Debug\CKEditor.NET.pdb
