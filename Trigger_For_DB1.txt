@@ -1,0 +1,7 @@
+create trigger AddNewPersonel
+on Personel
+after insert
+as
+Begin
+select 'Bir kayýt eklendi'
+END
