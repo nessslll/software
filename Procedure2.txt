@@ -1,0 +1,14 @@
+CREATE PROCEDURE deletePersonel
+	@pid int 
+
+	AS
+	SET NOCOUNT ON;
+	DELETE dbo.Personel
+	WHERE pid=@pid
+
+	GO 
+
+	SET ANSI_NULLS ON 
+	GO
+	SET QUOTED_IDENTIFIER ON
+	GO
