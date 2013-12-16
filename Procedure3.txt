@@ -1,0 +1,9 @@
+CREATE PROCEDURE Personel_ReadById
+    @pid int 
+    AS
+ 
+    BEGIN
+      SET NOCOUNT ON;
+      SELECT * from Personel
+      WHERE pid=@pid
+   END
