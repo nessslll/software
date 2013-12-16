@@ -1,0 +1,12 @@
+
+	CREATE PROCEDURE Personel_ReadAll
+AS
+BEGIN
+      SET NOCOUNT ON;
+      SELECT * from PERSONEL
+ 
+END
+GO
+
+
+EXEC dbo.Personel_ReadAll
