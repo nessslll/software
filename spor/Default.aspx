@@ -58,6 +58,7 @@
                         </li>
                         <li><a class="active" href="bahar_senlik.aspx" title="bahar">Bahar Şenlikleri</a></li>
                          <li><a class="active" href="iletisim.aspx" title="iletisim">İletişim</a></li>
+                         <li><a class="active" href="Yonetim/giris.aspx" title="Kullanıcı Girişi">Kullanıcı Girişi</a></li>
                     </ul>
                 </nav>
             </div>
@@ -68,22 +69,20 @@
                     <div id="homepage" class="clear">
                         <div class="push30">
                             <ul class="nospace clear">
-                                <li class="one_quarter first"><a href="#">
-                                    <img src="images/demo/gallery.gif" alt="">
-                                    <p class="bold">Spor Salonu 1</p>
+                                <li class="one_quarter first"><a href="sahaaktivite.aspx">
+                                    <img src="images/demo/3.jpg" alt="">
+                                    <p class="bold">Saha Aktiviteleri</p>
                                 </a></li>
-                                <li class="one_quarter"><a href="#">
-                                    <img src="images/demo/gallery.gif" alt="">
-                                    <p class="bold">Spor Salonu 2</p>
+                                <li class="one_quarter"><a href="grupaktivite.aspx">
+                                    <img src="images/demo/1.jpg" alt="">
+                                    <p class="bold">Grup Aktiviteleri</p>
                                 </a></li>
-                                <li class="one_quarter"><a href="#">
-                                    <img src="images/demo/gallery.gif" alt="">
-                                    <p class="bold">Spor Salonu 3</p>
-                                </a></li>
-                                <li class="one_quarter"><a href="#">
-                                    <img src="images/demo/gallery.gif" alt="">
-                                    <p class="bold">Spor Salonu 4</p>
-                                </a></li>
+                                <li class="one_quarter"><a href="fitness.aspx">
+                                    <img src="images/demo/2.jpg" alt="">
+                                    <p class="bold">Fitness Merkezi </p>
+                                
+                                <asp:TextBox ID="TextBox1" runat="server"></asp:TextBox>
+                                
                             </ul>
                         </div>
                     </div>
@@ -94,11 +93,11 @@
                             <div class="rslides_container clear">
                                 <ul class="rslides clear" id="rslides">
                                     <li>
-                                        <img src="images/demo/slider/1.jpg" alt=""></li>
+                                        <img src="images/hentbol.jpg" style="height: 250px; width: 800px"  alt=""></li>
                                     <li>
-                                        <img src="images/demo/slider/2.jpg" alt=""></li>
+                                        <img src="images/futbol.jpg" style="height: 250px; width: 800px"  alt=""></li>
                                     <li>
-                                        <img src="images/demo/slider/3.jpg" alt=""></li>
+                                        <img src="images/atletizm.jpg" style="height: 250px; width: 800px" alt=""></li>
                                 </ul>
                             </div>
                         </section>

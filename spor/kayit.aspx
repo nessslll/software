@@ -1,29 +1,25 @@
-﻿<%@ Page Language="VB" AutoEventWireup="false" CodeFile="kayit.aspx.vb" Inherits="kayit" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeFile="kayit.aspx.cs" Inherits="kayit" %>
 
 <!DOCTYPE html>
 
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
     <title></title>
-    <style type="text/css">
-        .auto-style2 {
-            width: 96px;
-        }
-        .auto-style1 {
-            width: 420px;
-        }
-    </style>
 </head>
 <body>
     <form id="form1" runat="server">
     <div>
-    
-       <table border="1" style="height: 414px; width: 563px">
+     <table border="1" style="height: 414px; width: 563px">
            <tr><td class="auto-style2"> 
                <asp:Label ID="Label12" runat="server" Text="Kategori:"></asp:Label>
                </td>
                <td class="auto-style1"> 
                    <asp:DropDownList ID="DropDownList1" runat="server">
+                       <asp:ListItem Value="4">Öğrenci</asp:ListItem>
+                       <asp:ListItem Value="5">Normal</asp:ListItem>
+                       <asp:ListItem Value="6">Personel</asp:ListItem>
+                       <asp:ListItem Value="7">Müdür</asp:ListItem>
+                       <asp:ListItem Value="8">Müdür Yardımcısı</asp:ListItem>
                    </asp:DropDownList>
                </td>
             </tr>
@@ -113,7 +109,7 @@
            <tr>
             <td> 
               
-                <asp:Button ID="Button1" runat="server" Text="Kaydet" />
+                <asp:Button ID="Button1" runat="server" Text="Kaydet" OnClick="Button1_Click" />
               
            </td>
                  </tr>
