@@ -1,0 +1,16 @@
+CREATE PROCEDURE getViaNameSurnamePersonel
+    @LastName nvarchar(20), 
+    @FirstName nvarchar(20) 
+AS 
+
+    SET NOCOUNT ON;
+    SELECT pid, pname, plname, p_email, p_dep,p_task,p_phone,p_iphone
+    FROM dbo.Personel
+    WHERE pname = @FirstName AND plname = @LastName
+GO
+
+
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
