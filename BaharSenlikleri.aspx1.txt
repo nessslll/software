@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head id="Head1" runat="server">
+    <title>ESOGÜ SPOR SALONU</title>
+    <meta charset="iso-8859-1">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="styles/main.css" rel="stylesheet" type="text/css" media="all">
+    <link href="styles/mediaqueries.css" rel="stylesheet" type="text/css" media="all">
+    <!--[if lt IE 9]>
+<link href="styles/ie/ie8.css" rel="stylesheet" type="text/css" media="all">
+<script src="scripts/ie/css3-mediaqueries.min.js"></script>
+<script src="scripts/ie/html5shiv.min.js"></script>
+<![endif]-->
+    <!-- Slider -->
+    <link href="scripts/responsiveslides.js-v1.53/responsiveslides.css" rel="stylesheet" type="text/css" media="all">
+    <style type="text/css">
+        .auto-style1 {
+            width: 100px;
+            height: 100px;
+        }
+    </style>
+</head>
+<body>
+    <form id="form1" runat="server">
+        <div>
+            <div class="wrapper row1">
+                <header id="header" class="full_width clear">
+                    <hgroup>
+                        <h1><a href="Default.aspx">ESOGÜ SPOR SALONU</a></h1>
+                        <h2>ESOGÜ SPOR SALONU</h2>
+                    </hgroup>
+                    <div id="header-contact">
+                        <ul class="list none">
+                            <li><span class="icon-envelope"></span><a href="#">xxxx@ogu.edu.tr</a></li>
+                            <li><span class="icon-phone"></span>+xx xxx xxxxxxxxxx</li>
+                        </ul>
+                    </div>
+                </header>
+            </div>
