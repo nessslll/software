@@ -21,12 +21,12 @@ public partial class giris : System.Web.UI.Page
             ltrHata.Text = "";
             if (txtKullaniciAdi.Text != "" && txtSifre.Text != "")
             {
-                DataTable dt = DBW.veriGetir("select * from KULLANICILAR where KULLANICI_ADI='" + txtKullaniciAdi.Text + "' and KULLANICI_PAROLA='" + txtSifre.Text + "' ");
+                DataTable dt = DBW.veriGetir("select * from Kullanici where uname='" + txtKullaniciAdi.Text + "' and passw='" + txtSifre.Text + "' ");
                 //'" + txtKullaniciAdi.Text + "' && KULLANICI_PAROLA='" + txtSifre.Text + "'");
                 if (dt.Rows.Count > 0)
                 {
-                    Session["Kullanici"] = dt.Rows[0]["KULLANICI_ADI"].ToString();
-                    Session["KULLANICI_ID"] = dt.Rows[0]["KULLANICI_ID"].ToString(); 
+                    Session["Kullanici"] = dt.Rows[0]["uname"].ToString();
+                    Session["KULLANICI_ID"] = dt.Rows[0]["u_id"].ToString(); 
                     Response.Redirect("IcerikDuzenle.aspx");
 
                 }
