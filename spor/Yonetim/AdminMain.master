@@ -25,7 +25,7 @@
                 <a href="#"></a></h1>
 
             <menu>
-                <li><a href="IcerikDuzenle.aspx">Menüler</a></li>
+                <li><a href="Rezervasyonlar.aspx">Rezervasyonlar</a></li>
                  <li><a href="DuyuruDuzenle.aspx">Duyurular</a></li>
                  <li><a href="GaleriDuzenle.aspx">Galeri</a></li>
                 <li><asp:LinkButton ID="lnkSifreDegistir" runat="server" OnClick="lnkSifreDegistir_Click">Þifre Deðiþtir</asp:LinkButton></li>
