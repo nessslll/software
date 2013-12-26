@@ -1,0 +1,23 @@
+protected void Page_Load(object sender, EventArgs e)
+    {
+        galeriyukle();
+    }
+
+    void galeriyukle()
+    {
+        SqlConnection baglan = new SqlConnection();
+        baglan.ConnectionString = "Data Source=M_AKIFEREN; Database=Database_kelepirci;Integrated Security=true ");
+        baglan.Open();
+        SqlCommand cmd = new SqlCommand();
+        cmd.Connection = baglan;
+        cmd.CommandText = "select * from Galeri ORDER BY Id ";
+        SqlDataReader drliste = cmd.ExecuteReader();
+        DataTable dt = new DataTable();
+        dt.Load(drliste);
+
+        repGaleri.DataSource = dt;
+        repGaleri.DataBind();
+
+        drliste.Close();
+        baglan.Close();
+    }
