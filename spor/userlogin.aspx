@@ -35,6 +35,10 @@
 			</div>  
             
              <asp:Literal ID="ltrHata" runat="server"></asp:Literal>
+		    <br />
+            <asp:HyperLink ID="HyperLink1" runat="server" NavigateUrl="~/kayit.aspx">Üye Ol</asp:HyperLink>
+            <br />
+            <asp:HyperLink ID="HyperLink2" runat="server" NavigateUrl="~/Yonetim/giris.aspx">Yönetici Girişi</asp:HyperLink>
 		</form>
 	</section>
 </div>
