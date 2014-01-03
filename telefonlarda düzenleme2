@@ -1,0 +1,8 @@
+alter table personel
+add constraint p_phone CHECK (p_phone is null or 
+(p_phone LIKE '[0][0-9][0-9][0-9]-[0-9][0-9][0-9][0-9][0-9][0-9][0-9]')
+AND LEN (p_phone)=12)
+
+--@ olmadan mail adresi kabul etmemek
+ALTER TABLE kullanici
+add constraint CHC_Mail2  CHECK(CHARINDEX('@',email)>0)
