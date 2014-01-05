@@ -1,8 +1,0 @@
-
-create trigger ADeleteUser
-on Kullanici
-after delete
-As
-Begin 
-Select 'Bir kayýt silindi'
-END

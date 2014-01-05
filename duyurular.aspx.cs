@@ -1,7 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Data;
-using System.Data.OleDb;
 using System.Linq;
 using System.Web;
 using System.Web.UI;
@@ -12,12 +11,12 @@ public partial class duyurular : System.Web.UI.Page
     protected void Page_Load(object sender, EventArgs e)
     {
 
-        DataTable dt = DBW.veriGetir("select * from DUYURULAR where DUYURU_ID=" + Request.QueryString["id"] + "");
+        DataTable dt = DBW.veriGetir("select * from Duyurular where DuyuruID=" + Request.QueryString["id"] + "");
 
         if (dt.Rows.Count > 0)
         {
-            lblBaslik.Text = dt.Rows[0]["DUYURU_BASLIGI"].ToString();
-            ltrIcerik.Text = dt.Rows[0]["DUYURU_ICERIGI"].ToString();
+            lblBaslik.Text = dt.Rows[0]["Baslik"].ToString();
+            ltrIcerik.Text = dt.Rows[0]["Icerik"].ToString();
         }
         else
         {
@@ -30,20 +29,12 @@ public partial class duyurular : System.Web.UI.Page
 
     void duyurulariyukle()
     {
-        OleDbConnection baglan = new OleDbConnection();
-        baglan.ConnectionString = "Provider = Microsoft.Jet.Oledb.4.0; Data Source=" + Server.MapPath("App_Data\\db.mdb");
-        baglan.Open();
-        OleDbCommand cmd = new OleDbCommand();
-        cmd.Connection = baglan;
-        cmd.CommandText = "select * from DUYURULAR ORDER BY  DUYURU_ID DESC ";
-        OleDbDataReader drliste = cmd.ExecuteReader();
-        DataTable dt = new DataTable();
-        dt.Load(drliste);
+
+
+        DataTable dt = DBW.veriGetir("select * from Duyurular order by DuyuruID DESC");
 
         repDuyuru.DataSource = dt;
         repDuyuru.DataBind();
 
-        drliste.Close();
-        baglan.Close();
     }
 }

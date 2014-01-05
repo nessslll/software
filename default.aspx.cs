@@ -1,56 +1,78 @@
-using System;
+﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel;
 using System.Linq;
 using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
 using System.Data;
 using System.Data.SqlClient;
+using System.Data.SqlServerCe;
 
-namespace kelepir
+
+public partial class _Default : System.Web.UI.Page
 {
-    public partial class Default : System.Web.UI.Page
+    protected void Page_Load(object sender, EventArgs e)
     {
-        protected void Page_Load(object sender, EventArgs e)
+        duyurulariyukle();
+        if (Session["userID"] != null)
         {
-            LinkButton lnk = this.Master.FindControl("LinkButton1") as LinkButton;
-            if (Session["userID"] != null)
-            {
-                KullaniciBilgiGetir();
-
-                lnk.Visible = true;
-            }
-            else {
-
-               lnk.Visible = false;
-            
-            }
+            ligiris.Visible = false;
+            liuser.Visible = true;
+            licikis.Visible = true;
+            KullaniciBilgiGetir();
         }
-
-        void KullaniciBilgiGetir()
+        else
         {
-            try
-            {
-                SqlConnection baglan = new SqlConnection("Data Source=M_AKIFEREN; Database=Database_kelepirci;Integrated Security=true ");
-
-
-                string sql = "select * from kullanicigiris where k_id='" + Session["userID"].ToString();
-                DataTable dt = new DataTable();
-               
-            }
-            catch (Exception)
-            {
-
-
-            }
-
-        }
-        protected void LinkButton1_Click(object sender, EventArgs e)
-        {
-            Session.Abandon();
-            Response.Redirect("Default.aspx");
+            liuser.Visible = false;
+            licikis.Visible = false;
         }
 
     }
-        
+
+    void duyurulariyukle()
+    {
+        try
+        {
+
+            DataTable dt = DBW.veriGetir("select * from Duyurular order by DuyuruID DESC");
+
+            repDuyuru.DataSource = dt;
+            repDuyuru.DataBind();
+
+
+
+        }
+        catch (Exception)
+        {
+
+
+        }
+
+
+    }
+
+
+    void KullaniciBilgiGetir()
+    {
+        try
+        {
+
+            DataTable dt = DBW.veriGetir("select * from Kullanici where u_id=" + Session["userID"].ToString());
+
+            if (dt.Rows.Count>0)
+            {
+                lblUser.Text = dt.Rows[0]["uname"].ToString();
+            }
+
+
+        }
+        catch (Exception)
+        {
+
+
+        }
+
+
+    }
 }

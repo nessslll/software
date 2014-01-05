@@ -11,25 +11,45 @@ public partial class main : System.Web.UI.MasterPage
 {
     protected void Page_Load(object sender, EventArgs e)
     {
-        menuleriyukle();
+      
+        if (Session["userID"] != null)
+        {
+            ligiris.Visible = false;
+            liuser.Visible = true;
+            licikis.Visible = true;
+            KullaniciBilgiGetir();
+        }
+        else
+        {
+            liuser.Visible = false;
+            licikis.Visible = false;
+        }
+
     }
 
-    void menuleriyukle()
+    
+
+
+    void KullaniciBilgiGetir()
     {
-        OleDbConnection baglan = new OleDbConnection();
-        baglan.ConnectionString = "Provider = Microsoft.Jet.Oledb.4.0; Data Source=" + Server.MapPath("App_Data\\db.mdb");
-        baglan.Open();
-        OleDbCommand cmd = new OleDbCommand();
-        cmd.Connection = baglan;
-        cmd.CommandText = "select * from MENULER ORDER BY MENU_ID ";
-        OleDbDataReader drliste = cmd.ExecuteReader();
-        DataTable dt = new DataTable();
-        dt.Load(drliste);
+        try
+        {
 
-        repBaslik.DataSource = dt;
-        repBaslik.DataBind();
+            DataTable dt = DBW.veriGetir("select * from Kullanici where u_id=" + Session["userID"].ToString());
 
-        drliste.Close();
-        baglan.Close();
+            if (dt.Rows.Count > 0)
+            {
+                lblUser.Text = dt.Rows[0]["uname"].ToString();
+            }
+
+
+        }
+        catch (Exception)
+        {
+
+
+        }
+
+
     }
 }

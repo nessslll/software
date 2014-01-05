@@ -1,8 +1,0 @@
-
-create trigger ADeletePersonel
-on Personel
-after delete
-As
-Begin 
-Select 'Bir kayýt silindi'
-END
